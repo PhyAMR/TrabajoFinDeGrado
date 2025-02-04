@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "tfg"
+version = "0.1.0"
+description = "Aquí mantengo los códigos para realizar el trabajo de fin de grado"
+authors = ["Álvaro Méndez Rodríguez de Tembleque <alvaromendezrt@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^2.2.2"
+seaborn = "^0.13.2"
+plotly = "^6.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
