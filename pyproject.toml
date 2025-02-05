@@ -11,7 +11,11 @@ python = "^3.11"
 numpy = "^2.2.2"
 seaborn = "^0.13.2"
 plotly = "^6.0.0"
+ipykernel = "^6.29.5"
 
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
 
 [build-system]
 requires = ["poetry-core"]

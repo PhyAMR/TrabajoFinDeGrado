@@ -6,7 +6,7 @@
 \usepackage{vmargin} %Para modificar los márgenes
 \setmargins{2.5cm}{1.5cm}{16.5cm}{23.42cm}{10pt}{1cm}{0pt}{2cm}
 %margen izquierdo, superior, anchura del texto, altura del texto, altura de los encabezados, espacio entre el texto y los encabezados, altura del pie de página, espacio entre el texto y el pie de página
-
+\usepackage{hyperref}
 \begin{document}
 %%%%%%Portada%%%%%%%
 \begin{titlepage}
@@ -105,6 +105,13 @@ known relations, and see that other relations can be obtained from these data.
 \subsection{Análisis de relaciones estructurales 2D}
 \subsection{Análisis de relaciones estructurales 3D}
 \subsection{Regresión simbólica}
+La regresión simbólica (SR) es un tipo de ajuste a los datos en el que no se parte de un 
+modelo concreto, como puede ser la regresión lineal o ajustar a una exponencial, sino que 
+se parte de una serie de operadores o funciones, como puede ser el uso de funciones trigonométricas 
+o usar funciones con exponentes, que busca el mejor modelo como combinación de esos operadores.  
+
+En este caso concreto se ha usado la librería \href{https://github.com/MilesCranmer/PySR}{PySR} la cual
+ha sido elegida por su impletenciación en Python, por los ''benchmarks''  o resultados que se describen en \cite{cranmerInterpretableMachineLearning2023}
 \subsubsection{Fundamento}
 \section{Resultados principales}
 \section{Conclusiones}
