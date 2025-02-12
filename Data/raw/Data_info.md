@@ -1,7 +1,5 @@
 # CANDELS EGS Data Overview
 
-This document summarizes the data available in the CANDELS EGS stellar mass, photometric redshift, and physical properties catalogs.
-
 ## Stellar Mass
 
 | Column Name      | Measurement Description | Further Considerations |
@@ -16,11 +14,14 @@ This document summarizes the data available in the CANDELS EGS stellar mass, pho
 | zphot          | Photometric redshift measurement | Estimated redshift based on multi-band photometry |
 | zspec          | Spectroscopic redshift from the DEEP3 catalog | More accurate redshift measurement using spectral lines |
 | q_zspec        | Quality flag for the spectroscopic redshift (1=Good, 2=Fair, 3=Poor) | Indicates reliability of spectroscopic redshift |
+| r_zspec        | Source of the spectroscopic redshift catalog | Identifies origin of spectroscopic data |
 | zbest          | Best redshift measurement, prioritizing spectroscopic over photometric | Combines best available redshift estimate |
+| zAGN           | Photometric redshift for AGN sources | Uses AGN-specific SED templates |
 | M_neb_med      | Stellar mass measurement considering nebular emission | Accounts for ionized gas contribution to mass estimates |
 | s_neb_med      | Uncertainty in M_neb_med | Measurement error due to model assumptions |
 | M_med          | Stellar mass measurement without nebular emission | Mass estimate excluding ionized gas effects |
 | s_med          | Uncertainty in M_med | Measurement error due to model assumptions |
+| Additional 22 columns describing different stellar mass measurement methods and their uncertainties | Various models and methodologies used for estimation | Different assumptions about star formation history and nebular emissions |
 
 ## Photometric Redshift
 
@@ -34,12 +35,7 @@ This document summarizes the data available in the CANDELS EGS stellar mass, pho
 | z_spec          | Spectroscopic redshift if available | More accurate redshift measurement using spectral lines |
 | z_spec_ref      | Reference catalog for spectroscopic redshift | Indicates the dataset used for spec-z |
 | z_grism         | 3D-HST grism redshift if available | Intermediate accuracy redshift from grism spectroscopy |
-| mFDa4_z_peak    | Redshift where photo-z probability distribution peaks | Most probable photometric redshift |
-| mFDa4_z_weight  | Weighted centroid of the probability distribution | Represents the expected value of redshift |
-| HB4_z_peak      | Redshift peak from hierarchical Bayesian method | Statistical peak redshift using Bayesian approach |
-| HB4_z_weight    | Weighted centroid from hierarchical Bayesian method | More robust redshift estimate using multiple priors |
-| z683_low/high   | 68.3% credible interval for the redshift | Uncertainty range covering 68.3% probability |
-| z954_low/high   | 95.4% credible interval for the redshift | Uncertainty range covering 95.4% probability |
+| Additional 49 columns describing various redshift estimation methods | Methods include Bayesian, f-divergence, and participant-based calculations | Each method has different statistical confidence levels |
 
 ## Physical Properties
 
@@ -52,9 +48,11 @@ This document summarizes the data available in the CANDELS EGS stellar mass, pho
 | Gas Metallicity | Metallicity of gas, normalized to solar values | Indicates chemical enrichment of the galaxy |
 | Extinction Law | Calzetti (1) or Small Magellanic Cloud (2) | Describes how dust absorbs/scatters light |
 | Reduced chi^2  | Goodness-of-fit statistic | Evaluates the reliability of model fitting |
-| Lnu(1400A)     | Rest-frame luminosity at 1400 Angstrom (erg/s/Hz) | Indicates UV emission, related to young stars |
-| Lnu(2700A)     | Rest-frame luminosity at 2700 Angstrom (erg/s/Hz) | Measures UV-optical emission from stars |
-| U, B, V, R, I, J, K | Rest-frame magnitudes in the AB system | Represents intrinsic brightness in different bands |
+| log(Mass)_low  | Lower stellar mass limit at 99% confidence | Represents lower bound of stellar mass estimate |
+| log(Mass)_high | Upper stellar mass limit at 99% confidence | Represents upper bound of stellar mass estimate |
+| E(B-V)         | Color excess due to dust extinction | Quantifies dust absorption effect |
+| log(Lbol/Lsun) | Logarithm of bolometric luminosity | Measures total energy output of the galaxy |
+| Additional 111 columns covering detailed physical parameters from different authors and models | Properties like star formation history, dust extinction, and rest-frame magnitudes | Provides comprehensive galaxy characterization |
 
-
+This document summarizes the data available in the CANDELS EGS stellar mass, photometric redshift, and physical properties catalogs.
 
